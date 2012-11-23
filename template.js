@@ -1,0 +1,1 @@
+module.exports = "<div class='rating'><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span></div>";
