@@ -6,7 +6,7 @@
     "component/domify": "*",
     "component/event": "*"
   },
-  "main": "rating.js",
-  "scripts": ["rating.js", "template.js"],
-  "styles": ["rating.css"]
+  "main": "src/rating.js",
+  "scripts": ["src/rating.js", "src/template.js"],
+  "styles": ["src/rating.css"]
 }
