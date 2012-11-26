@@ -2,7 +2,7 @@ var html = require('./template'),
     create = require('domify'),
     ev = require('event')
 
-module.exports = function (element) {
+module.exports = function (insert) {
   var numbers = {49: 1, 50: 2, 51: 3, 52: 4, 53: 5};
   var stars = create(html).pop();
   var nodes = new Array();
@@ -15,7 +15,7 @@ module.exports = function (element) {
     });
   };
   
-  document.body.appendChild(stars)
+  insert(stars);
   
   Array.prototype.forEach.call(stars.childNodes, function (node, i) {
     nodes.push(node);
