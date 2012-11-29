@@ -6,6 +6,7 @@ module.exports = function (insert) {
   var numbers = {49: 1, 50: 2, 51: 3, 52: 4, 53: 5};
   var stars = create(html).pop();
   var nodes = new Array();
+  var enabled = true;
   var rating = 1;
   
   var render = function (i) {
@@ -21,20 +22,24 @@ module.exports = function (insert) {
     nodes.push(node);
     
     ev.bind(node, 'mouseover', function () {
+      if(!enabled) return;
       render(i+1)
     });
     
     ev.bind(node, 'click', function () {
+      if(!enabled) return;
       rating = i+1;
       render(i+1)
     });
   });
   
   ev.bind(stars, 'mouseout', function () {
+    if(!enabled) return;
     render(rating)
   })
   
   ev.bind(document, 'keydown', function (e) {
+    if(!enabled) return;
     if(e.target.tagName.toLowerCase() === 'input') return;
     if(!numbers[e.keyCode]) return;
     rating = numbers[e.keyCode];
@@ -42,7 +47,16 @@ module.exports = function (insert) {
   })
   
   render(rating)
-  return function () {
+
+  var returns = function () {
     return rating;
+  };
+
+  returns.disable = function () {
+    enabled = false;
+  };
+
+  returns.enable = function () {
+    enabled = true;
   };
 };
