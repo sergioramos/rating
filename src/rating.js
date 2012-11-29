@@ -59,4 +59,6 @@ module.exports = function (insert) {
   returns.enable = function () {
     enabled = true;
   };
+
+  return returns;
 };
