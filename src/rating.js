@@ -40,7 +40,8 @@ module.exports = function (insert) {
   
   ev.bind(document, 'keydown', function (e) {
     if(!enabled) return;
-    if(e.target.tagName.toLowerCase() === 'input') return;
+    var tag = e.target.tagName.toLowerCase();
+    if(tag === 'input' || tag === 'textarea') return;
     if(!numbers[e.keyCode]) return;
     rating = numbers[e.keyCode];
     render(rating);
