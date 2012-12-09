@@ -34,3 +34,7 @@ returns the current rating number
 #### instance.disable()
 
 #### instance.enable()
+
+## license
+
+MIT
