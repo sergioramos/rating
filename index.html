@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='build/build.css' rel='stylesheet' type='text/css'>
+    <script src='build/build.js'></script>
+  </head>
+  <body>
+    <div id='rating'></div>
+    <script>
+      var rating = require('rating');
+      
+      rating(function (el) {
+        document.getElementById('rating').appendChild(el)
+      });
+    </script>
+  </body>
+</html>
