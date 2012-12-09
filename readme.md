@@ -1,6 +1,6 @@
 # rating
 
-rating widget
+rating widget. [demo](http://ramitos.github.com/rating)
 
 ## install
 
