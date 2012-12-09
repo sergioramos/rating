@@ -23,20 +23,20 @@ module.exports = function (insert) {
     
     ev.bind(node, 'mouseover', function () {
       if(!enabled) return;
-      render(i+1)
+      render(i+1);
     });
     
     ev.bind(node, 'click', function () {
       if(!enabled) return;
       rating = i+1;
-      render(i+1)
+      render(i+1);
     });
   });
   
   ev.bind(stars, 'mouseout', function () {
     if(!enabled) return;
-    render(rating)
-  })
+    render(rating);
+  });
   
   ev.bind(document, 'keydown', function (e) {
     if(!enabled) return;
@@ -45,9 +45,9 @@ module.exports = function (insert) {
     if(!numbers[e.keyCode]) return;
     rating = numbers[e.keyCode];
     render(rating);
-  })
+  });
   
-  render(rating)
+  render(rating);
 
   var returns = function () {
     return rating;

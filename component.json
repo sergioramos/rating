@@ -1,12 +1,17 @@
 {
   "name": "rating",
   "repo": "ramitos/rating",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "component/domify": "*",
     "component/event": "*"
   },
   "main": "src/rating.js",
-  "scripts": ["src/rating.js", "src/template.js"],
-  "styles": ["src/rating.css"]
+  "scripts": [
+    "src/template.js",
+    "src/rating.js"
+  ],
+  "styles": [
+    "src/rating.css"
+  ]
 }
