@@ -4,7 +4,7 @@ var html = require('./template'),
 
 module.exports = function (insert) {
   var numbers = {49: 1, 50: 2, 51: 3, 52: 4, 53: 5};
-  var stars = create(html).pop();
+  var stars = create(html);
   var nodes = new Array();
   var enabled = true;
   var rating = 1;
